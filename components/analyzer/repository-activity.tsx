@@ -124,7 +124,7 @@ export default function RepositoryActivity({
               borderRadius: 8,
             }}
             labelStyle={{ color: "#E2E8F0" }}
-            formatter={(value: number) => [`${value} commits`, ""]}
+            formatter={(value) => [`${value} commits`, ""]}
           />
 
           <Area
