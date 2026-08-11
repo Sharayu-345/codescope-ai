@@ -24,8 +24,8 @@ export default function ReportSection({
         generateReport({
           repoData,
           languageData,
-          contributors,
-          commitData,
+          contributors: contributors ?? [],
+          commitData: commitData ?? [],
           analysis,
         })
       }
