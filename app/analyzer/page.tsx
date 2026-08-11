@@ -254,14 +254,13 @@ localStorage.setItem(
 
             <AnalysisResult analysis={aiResult} />
 
-           <ReportSection
-    repoData={repoData}
-    languageData={languageData}
-    contributors={contributors}
-    commitData={commitData}
-    analysis={analysis}
-  />
-  
+            <ReportSection
+              repoData={repoData}
+              languageData={languageData}
+              contributors={contributors}
+              commitData={commitData}
+              analysis={analysis}
+            />
           </>
         )}
       </div>
