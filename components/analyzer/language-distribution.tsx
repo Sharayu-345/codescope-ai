@@ -87,12 +87,16 @@ export default function LanguageDistribution({
                     border: "1px solid #334155",
                     borderRadius: 8,
                   }}
-                  formatter={(value: number, name: string) => [
-                    `${((value / totalBytes) * 100).toFixed(1)}% (${formatBytes(
-                      value
-                    )})`,
-                    name,
-                  ]}
+                  formatter={(value, name) => {
+                    const numericValue =
+                      typeof value === "number" ? value : Number(value) || 0;
+                    return [
+                      `${((numericValue / totalBytes) * 100).toFixed(
+                        1
+                      )}% (${formatBytes(numericValue)})`,
+                      name,
+                    ];
+                  }}
                 />
               </PieChart>
             </ResponsiveContainer>
